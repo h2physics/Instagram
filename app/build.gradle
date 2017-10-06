@@ -38,7 +38,6 @@ dependencies {
     annotationProcessor "com.jakewharton:butterknife-compiler:$rootProject.ext.butterknifeVersion"
     compile "com.wang.avi:library:$rootProject.ext.aviVersion"
 
-    compile 'com.github.bumptech.glide:glide:3.8.0'
     // Dependencies for local unit tests
     testCompile "junit:junit:$rootProject.ext.junitVersion"
     testCompile "org.mockito:mockito-all:$rootProject.ext.mockitoVersion"
@@ -49,8 +48,6 @@ dependencies {
     // Dependencies for Android unit tests
     androidTestCompile "junit:junit:$rootProject.ext.junitVersion"
     androidTestCompile "org.mockito:mockito-core:$rootProject.ext.mockitoVersion"
-    androidTestCompile 'com.google.dexmaker:dexmaker:1.2'
-    androidTestCompile 'com.google.dexmaker:dexmaker-mockito:1.2'
     // Espresso UI Testing
     androidTestCompile "com.android.support.test.espresso:espresso-core:$rootProject.espressoVersion"
     androidTestCompile "com.android.support.test.espresso:espresso-contrib:$rootProject.espressoVersion"
@@ -61,5 +58,9 @@ dependencies {
     androidTestCompile "com.android.support:recyclerview-v7:$rootProject.supportLibraryVersion"
     androidTestCompile "com.android.support:appcompat-v7:$rootProject.supportLibraryVersion"
     androidTestCompile "com.android.support:design:$rootProject.supportLibraryVersion"
+    compile 'com.github.bumptech.glide:glide:3.8.0'
     compile 'de.hdodenhof:circleimageview:2.1.0'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    androidTestCompile 'com.google.dexmaker:dexmaker:1.2'
+    androidTestCompile 'com.google.dexmaker:dexmaker-mockito:1.2'
 }
