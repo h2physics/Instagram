@@ -2,6 +2,7 @@ package com.h2physics.instagram.ui.example;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 
 import com.h2physics.instagram.R;
 import com.h2physics.instagram.data.model.Photo;
@@ -31,7 +32,8 @@ public class TestActivity extends AppCompatActivity {
         getAllPhotoModel.getAllPhoto(10).enqueue(new Callback<List<Photo>>() {
             @Override
             public void onResponse(Call<List<Photo>> call, Response<List<Photo>> response) {
-
+                photoList = response.body();
+                Log.d("photoList ","" + response.body().size());
             }
 
             @Override
