@@ -36,7 +36,7 @@ public class User {
     private int totalPhotos;
     @SerializedName("profile_image")
     @Expose
-    private List<String> mProfileImage;
+    private ProfileImage mProfileImage;
 
     public String getId() {
         return mId;
@@ -70,7 +70,7 @@ public class User {
         return totalPhotos;
     }
 
-    public List<String> getProfileImage() {
+    public ProfileImage getmProfileImage() {
         return mProfileImage;
     }
 }

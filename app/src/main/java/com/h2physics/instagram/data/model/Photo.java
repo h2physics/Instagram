@@ -21,7 +21,7 @@ public class Photo {
     private User mUser;
     @SerializedName("urls")
     @Expose
-    private List<String> mUrl;
+    private Urls mUrl;
 
     public String getId() {
         return mId;
@@ -35,7 +35,7 @@ public class Photo {
         return mUser;
     }
 
-    public List<String> getUrl() {
+    public Urls getmUrl() {
         return mUrl;
     }
 
