@@ -39,6 +39,14 @@ public class Photo {
         return mUrl;
     }
 
+    public Photo(String mId, int likes, User mUser, Urls mUrl) {
+        this.mId = mId;
+        this.likes = likes;
+        this.mUser = mUser;
+        this.mUrl = mUrl;
+    }
+
+
     //    private Builder builder;
 //
 //    public Photo(Builder builder) {

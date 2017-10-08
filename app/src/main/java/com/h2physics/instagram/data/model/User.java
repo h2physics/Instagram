@@ -73,4 +73,16 @@ public class User {
     public ProfileImage getmProfileImage() {
         return mProfileImage;
     }
+
+    public User(String mId, String mUsername, String mName, String mUserUrl, String mBiology, String mLocation, int totalLikes, int totalPhotos, ProfileImage mProfileImage) {
+        this.mId = mId;
+        this.mUsername = mUsername;
+        this.mName = mName;
+        this.mUserUrl = mUserUrl;
+        this.mBiology = mBiology;
+        this.mLocation = mLocation;
+        this.totalLikes = totalLikes;
+        this.totalPhotos = totalPhotos;
+        this.mProfileImage = mProfileImage;
+    }
 }
