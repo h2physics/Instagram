@@ -1,6 +1,7 @@
 package com.h2physics.instagram.ui.search
 
 import android.view.View
+import com.h2physics.instagram.R
 
 import com.h2physics.instagram.ui.base.BaseFragment
 
@@ -10,7 +11,7 @@ import com.h2physics.instagram.ui.base.BaseFragment
 
 class SearchFragment : BaseFragment() {
     override fun getContentLayout(): Int {
-        return 0
+        return R.layout.fragment_search
     }
 
     override fun initView(view: View) {
