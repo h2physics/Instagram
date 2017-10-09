@@ -1,5 +1,6 @@
 package com.h2physics.instagram.ui.adapter;
 
+import android.content.Context;
 import android.view.View;
 import android.view.ViewGroup;
 
@@ -12,6 +13,11 @@ import com.h2physics.instagram.ui.base.BaseViewHolder;
  */
 
 public class PhotoAdapter extends BaseAdapter<Photo> {
+
+    public PhotoAdapter(Context mContext) {
+        super(mContext);
+    }
+
     @Override
     public int getContentView() {
         return 0;

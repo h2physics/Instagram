@@ -3,6 +3,7 @@ package com.h2physics.instagram.ui.base;
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -12,6 +13,11 @@ import java.util.List;
 public abstract class BaseAdapter<T> extends RecyclerView.Adapter<BaseViewHolder<T>> {
     public List<T> mList;
     public Context mContext;
+
+    public BaseAdapter(Context mContext) {
+        this.mContext = mContext;
+        mList = new ArrayList<>();
+    }
 
     @Override
     public int getItemCount() {

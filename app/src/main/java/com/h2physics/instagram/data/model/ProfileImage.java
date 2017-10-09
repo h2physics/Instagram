@@ -15,4 +15,8 @@ public class ProfileImage {
     public String getMedium() {
         return medium;
     }
+
+    public ProfileImage(String medium) {
+        this.medium = medium;
+    }
 }

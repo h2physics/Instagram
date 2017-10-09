@@ -15,4 +15,8 @@ public class Urls {
     public String getFull() {
         return full;
     }
+
+    public Urls(String full) {
+        this.full = full;
+    }
 }
