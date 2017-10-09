@@ -63,10 +63,6 @@ class PagerAdapter(val context : Context?,
                 drawable = context?.resources?.getDrawable(R.drawable.ic_user)
             }
         }
-//        var spanStringBuilder : SpannableStringBuilder? = SpannableStringBuilder("  " + title)
-//        drawable?.setBounds(5, 5, drawable!!.intrinsicWidth, drawable!!.intrinsicHeight)
-//        val span : ImageSpan? = ImageSpan(drawable, DynamicDrawableSpan.ALIGN_BASELINE)
-//        spanStringBuilder?.setSpan(span, 0, 1, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
 
         return title
     }
