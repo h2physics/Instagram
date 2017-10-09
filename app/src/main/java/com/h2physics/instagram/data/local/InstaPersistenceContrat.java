@@ -20,12 +20,14 @@ public final class InstaPersistenceContrat {
         public static final String TABLE_PHOTO = "photos";
         public static final String COLUMN_ID = "id";
         public static final String COLUMN_LIKES = "likes";
+        public static final String COLUMN_DESCRIPTION = "description";
         public static final String COLUMN_URLS = "urls";
         public static final String COLUMN_USER_ID = "user_id";
 
         public static final String SQL_CREATE_STATEMENT = "CREATE TABLE " + TABLE_PHOTO + "(" +
                 COLUMN_ID + TEXT_TYPE + " PRIMARY KEY, " +
                 COLUMN_LIKES + INTEGER_TYPE + " NOT NULL, " +
+                COLUMN_DESCRIPTION + TEXT_TYPE + ", " +
                 COLUMN_URLS + TEXT_TYPE + " NOT NULL, " +
                 COLUMN_USER_ID + TEXT_TYPE + " FOREIGNKEY REFERENCES " +
                 UserEntry.TABLE_USER + "(" + UserEntry.COLUMN_ID + ")" + ");";

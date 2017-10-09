@@ -53,7 +53,7 @@ public class TestActivity extends AppCompatActivity {
 
     private void pullData() {
         photoList = new ArrayList<>();
-        GetAllPhoto getAllPhotoModel = Client.getInstance().create(GetAllPhoto.class);
+        GetAllPhoto getAllPhotoModel = Client.getInstance(this).create(GetAllPhoto.class);
         getAllPhotoModel.getAllPhoto(10).enqueue(new Callback<List<Photo>>() {
             @Override
             public void onResponse(Call<List<Photo>> call, Response<List<Photo>> response) {

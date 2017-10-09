@@ -16,6 +16,9 @@ public class Photo {
     @SerializedName("likes")
     @Expose
     private int likes;
+    @SerializedName("description")
+    @Expose
+    private String mDescription;
     @SerializedName("user")
     @Expose
     private User mUser;
@@ -31,11 +34,15 @@ public class Photo {
         return likes;
     }
 
+    public String getDescription() {
+        return mDescription;
+    }
+
     public User getUser() {
         return mUser;
     }
 
-    public Urls getmUrl() {
+    public Urls getUrl() {
         return mUrl;
     }
 

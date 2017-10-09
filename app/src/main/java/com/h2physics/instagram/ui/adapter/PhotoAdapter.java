@@ -60,7 +60,7 @@ public class PhotoAdapter extends BaseAdapter<Photo> {
                     .load(photo.getUser().getmProfileImage().getMedium())
                     .into(imgAvatar);
             Glide.with(mContext)
-                    .load(photo.getmUrl().getFull())
+                    .load(photo.getUrl().getFull())
                     .into(imgBackground);
             txtName.setText(photo.getUser().getName());
             txtNumLike.setText(photo.getLikes() + "");
