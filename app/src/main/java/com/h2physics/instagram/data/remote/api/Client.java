@@ -1,5 +1,7 @@
 package com.h2physics.instagram.data.remote.api;
 
+import android.content.Context;
+
 import com.h2physics.instagram.BuildConfig;
 
 import java.io.IOException;
@@ -18,12 +20,15 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class Client {
     private static Retrofit retrofit;
-    private static Client instance = new Client();
-    public static Client getInstance(){
+    private static Client instance;
+    public static Client getInstance(Context context){
+        if (instance == null){
+            instance = new Client(context);
+        }
         return instance;
     }
 
-    private Client(){
+    private Client(Context context){
         OkHttpClient.Builder httpClientBuilder = new OkHttpClient.Builder().addInterceptor(new Interceptor() {
             @Override
             public Response intercept(Chain chain) throws IOException {

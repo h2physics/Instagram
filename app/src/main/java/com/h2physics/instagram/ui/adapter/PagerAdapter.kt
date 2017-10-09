@@ -5,10 +5,6 @@ import android.graphics.drawable.Drawable
 import android.support.v4.app.Fragment
 import android.support.v4.app.FragmentManager
 import android.support.v4.app.FragmentStatePagerAdapter
-import android.text.SpannableStringBuilder
-import android.text.Spanned
-import android.text.style.DynamicDrawableSpan
-import android.text.style.ImageSpan
 import com.h2physics.instagram.R
 
 import com.h2physics.instagram.ui.collection.CollectionFragment
