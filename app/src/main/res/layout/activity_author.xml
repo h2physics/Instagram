@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context="com.h2physics.instagram.ui.author.AuthorActivity">
+
+        <RelativeLayout
+            android:id="@+id/rl_header"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:background="@color/colorOrangeTransparent">
+            <ImageView
+                android:id="@+id/imv_avatar"
+                android:src="@drawable/user_image"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:scaleType="centerCrop"
+                android:layout_centerInParent="true"/>
+            <TextView
+                android:id="@+id/tv_name"
+                android:text="Van Hung"
+                android:textSize="18sp"
+                android:textColor="@color/colorText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/imv_avatar"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rl_header">
+
+            <LinearLayout
+                android:id="@+id/ll_like_and_photo"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/imv_total_likes"
+                        style="@style/IconDescription"
+                        android:src="@drawable/ic_like"/>
+
+                    <TextView
+                        android:id="@+id/tv_total_likes"
+                        android:text="12"
+                        android:textSize="18sp"
+                        android:textColor="@color/colorText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/imv_total_photos"
+                        style="@style/IconDescription"
+                        android:src="@drawable/ic_photo"/>
+
+                    <TextView
+                        android:id="@+id/tv_total_photos"
+                        android:text="12"
+                        android:textSize="18sp"
+                        android:textColor="@color/colorText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/seperate1"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/ll_like_and_photo"
+                android:background="@color/colorText"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"/>
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/layout_biography"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/seperate1"
+                android:padding="16dp">
+                <ImageView
+                    android:id="@+id/imv_bio"
+                    style="@style/IconDescription"
+                    android:src="@drawable/ic_biography"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:text="Biography"
+                    android:textSize="18sp"
+                    android:textColor="@color/colorText"
+                    android:gravity="center_vertical"
+                    app:layout_constraintTop_toTopOf="@id/imv_bio"
+                    app:layout_constraintBottom_toBottomOf="@id/imv_bio"
+                    app:layout_constraintLeft_toRightOf="@id/imv_bio"/>
+
+                <TextView
+                    android:id="@+id/tv_biography"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@color/colorText"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/imv_bio"/>
+            </android.support.constraint.ConstraintLayout>
+
+            <View
+                android:id="@+id/seperate2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/layout_biography"
+                android:background="@color/colorText"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"/>
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/layout_location"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/seperate2"
+                android:padding="16dp">
+                <ImageView
+                    android:id="@+id/imv_location"
+                    style="@style/IconDescription"
+                    android:src="@drawable/ic_location"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:text="Location"
+                    android:textSize="18sp"
+                    android:textColor="@color/colorText"
+                    android:gravity="center_vertical"
+                    app:layout_constraintTop_toTopOf="@id/imv_location"
+                    app:layout_constraintBottom_toBottomOf="@id/imv_location"
+                    app:layout_constraintLeft_toRightOf="@id/imv_location"/>
+
+                <TextView
+                    android:id="@+id/tv_location"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@color/colorText"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/imv_location"/>
+            </android.support.constraint.ConstraintLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+</ScrollView>

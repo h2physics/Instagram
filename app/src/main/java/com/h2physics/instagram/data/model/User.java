@@ -3,13 +3,14 @@ package com.h2physics.instagram.data.model;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
+import java.io.Serializable;
 import java.util.List;
 
 /**
  * Created by YukiNoHara on 10/7/2017.
  */
 
-public class User {
+public class User implements Serializable{
     @SerializedName("id")
     @Expose
     private String mId;
@@ -24,7 +25,7 @@ public class User {
     private String mUserUrl;
     @SerializedName("bio")
     @Expose
-    private String mBiology;
+    private String mBiography;
     @SerializedName("location")
     @Expose
     private String mLocation;
@@ -55,7 +56,7 @@ public class User {
     }
 
     public String getBiology() {
-        return mBiology;
+        return mBiography;
     }
 
     public String getLocation() {
@@ -74,12 +75,12 @@ public class User {
         return mProfileImage;
     }
 
-    public User(String mId, String mUsername, String mName, String mUserUrl, String mBiology, String mLocation, int totalLikes, int totalPhotos, ProfileImage mProfileImage) {
+    public User(String mId, String mUsername, String mName, String mUserUrl, String mBiography, String mLocation, int totalLikes, int totalPhotos, ProfileImage mProfileImage) {
         this.mId = mId;
         this.mUsername = mUsername;
         this.mName = mName;
         this.mUserUrl = mUserUrl;
-        this.mBiology = mBiology;
+        this.mBiography = mBiography;
         this.mLocation = mLocation;
         this.totalLikes = totalLikes;
         this.totalPhotos = totalPhotos;

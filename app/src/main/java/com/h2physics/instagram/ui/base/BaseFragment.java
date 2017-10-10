@@ -26,6 +26,7 @@ import butterknife.ButterKnife;
 
 public abstract class BaseFragment extends Fragment{
     private static final String LOG_TAG = "BaseFragment";
+    protected Context mContext;
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,6 +45,7 @@ public abstract class BaseFragment extends Fragment{
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
+        mContext = getActivity();
         initData();
     }
 

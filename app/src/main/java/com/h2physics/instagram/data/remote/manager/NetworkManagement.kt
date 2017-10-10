@@ -1,6 +1,7 @@
 package com.h2physics.instagram.data.remote.manager
 
 import android.content.Context
+import android.util.Log
 import com.h2physics.instagram.data.model.Photo
 import com.h2physics.instagram.data.model.User
 import com.h2physics.instagram.data.remote.api.Client
@@ -14,7 +15,7 @@ import retrofit2.Response
  * Created by YukiNoHara on 10/7/2017.
  */
 
-class NetworkManagement private constructor(context: Context?){
+class NetworkManagement constructor(context: Context?){
     private var INSTANCE : NetworkManagement? = null
 
     fun getInstance(context : Context?) : NetworkManagement?{
@@ -32,6 +33,7 @@ class NetworkManagement private constructor(context: Context?){
                     val photos : List<Photo>? = response.body();
                     callback.onSuccess(photos)
                 }
+                Log.e("Network", response.isSuccessful.toString() +  " - " + response.code())
             }
 
             override fun onFailure(call: Call<List<Photo>>?, t: Throwable?) {

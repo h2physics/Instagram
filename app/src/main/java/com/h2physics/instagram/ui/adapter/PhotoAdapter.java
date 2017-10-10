@@ -24,12 +24,12 @@ public class PhotoAdapter extends BaseAdapter<Photo> {
 
     @Override
     public int getContentView() {
-        return R.layout.fragment_home;
+        return R.layout.item_photo;
     }
 
     @Override
     public BaseViewHolder<Photo> onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(mContext).inflate(R.layout.fragment_home,parent,false);
+        View view = LayoutInflater.from(mContext).inflate(R.layout.item_photo,parent,false);
         return new PhotoViewHolder(view);
     }
 
